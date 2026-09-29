@@ -1,12 +1,12 @@
 import { describe, expect, it } from "vitest";
-import { Door } from "./src/app/tdd";
+import { Door, Gamer } from "./src/app/tdd";
 
 
 
 
 describe("Porte", () => {
   it("Une porte fermée ne peut pas être franchie.", () => {
-    const door = new Door(false);
+    const door = new Door(false, "blueKey");
 
     door.isOpen(false);
 
@@ -15,7 +15,7 @@ describe("Porte", () => {
   });
 
    it("Une porte ouverte peut être franchie.", () => {
-    const door = new Door(true);
+    const door = new Door(true, "blueKey");
     
 
     door.isOpen(true);
@@ -24,4 +24,18 @@ describe("Porte", () => {
     expect(door.status).toBe(true);
     
   });
+
+   it("chaque porte peut nécessiter une clé particulière.", () => {
+    const door = new Door(false, "blueKey");
+    const gamer = new Gamer("John");
+    gamer.addKey("blueKey");
+    gamer.useKey(door, gamer);
+    
+
+    expect(door.status).toBe(true);
+
+    
+    
+  });
+
 })
