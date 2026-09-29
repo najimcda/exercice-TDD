@@ -13,4 +13,15 @@ describe("Porte", () => {
     expect(door.status).toBe(false);
     
   });
+
+   it("Une porte ouverte peut être franchie.", () => {
+    const door = new Door(true);
+    
+
+    door.isOpen(true);
+    
+
+    expect(door.status).toBe(true);
+    
+  });
 })

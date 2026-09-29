@@ -1,12 +1,14 @@
 export class Door{
-    status: boolean
+    status: boolean;
+    
 
     constructor(status: boolean) {
     this.status = status;
     
+    
   }
 
-  isOpen(status: boolean): boolean{
+    isOpen(status: boolean): boolean{
     if(status === false){
         return false;
     }
@@ -14,5 +16,6 @@ export class Door{
     return true;
   }
 }
+
 
 
