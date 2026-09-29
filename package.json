@@ -1,0 +1,23 @@
+{
+  "name": "exercice-tdd",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/najimcda/exercice-TDD#readme",
+  "bugs": {
+    "url": "https://github.com/najimcda/exercice-TDD/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/najimcda/exercice-TDD.git"
+  },
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "vitest"
+  },
+  "devDependencies": {
+    "typescript": "^7.0.2",
+    "vite": "^8.3.1",
+    "vitest": "^5.0.2"
+  }
+}
